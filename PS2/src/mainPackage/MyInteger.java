@@ -12,11 +12,11 @@ public class MyInteger {
 	public static void main(String[] args) {
         //created this class to test MyInteger class and methods
         
-        MyInteger integ = new MyInteger(9);
-        System.out.println(integ.isEven());
-        System.out.println(integ.isOdd());
-        System.out.println(integ.equals(9));
-        System.out.println(integ.isPrime());
+        MyInteger newInt = new MyInteger(9);
+        System.out.println(newInt.isEven());
+        System.out.println(newInt.isOdd());
+        System.out.println(newInt.equals(9));
+        System.out.println(newInt.isPrime());
         System.out.println(parseInt("1234"));
 
     }
@@ -32,7 +32,7 @@ public class MyInteger {
 	}
 	// isEven returns true if given value is even
 	public boolean isEven() {
-		if (value % 2 == 0) {
+		if (this.getMyInteger() % 2 == 0) {
 			return true;
 		} else {
 			return false;
@@ -40,7 +40,7 @@ public class MyInteger {
 	}
 	// isOdd returns true if given value is odd
 	public boolean isOdd() {
-		if (value % 2 != 0) {
+		if (this.getMyInteger() % 2 != 0) {
 			return true;
 		} else {
 			return false;
@@ -60,7 +60,14 @@ public class MyInteger {
 	}
 	// returns true if specified value is even
 	public static boolean isEven(int value) {
-		return isEven(value);
+		if (value % 2 == 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	// returns true if specified value is odd
 	public static boolean isOdd(int value) {
@@ -72,7 +79,12 @@ public class MyInteger {
 	}
 	// returns true if specified value is even
 	public static boolean isEven(MyInteger myInt) {
-		return MyInteger.isEven(myInt.getMyInteger());
+		if (myInt.getMyInteger() % 2 == 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	// returns true if specified value is odd
 	public static boolean isOdd(MyInteger myInt) {
@@ -101,7 +113,7 @@ public class MyInteger {
 	}
 	// uses parseInt to convert an array of numeric characters into an int value
 	public static int parseInt(char[] anArray) {
-		return parseInt(new String(anArray));
+		
 	}
 	
 	
